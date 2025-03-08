@@ -190,3 +190,4 @@ client_secret.json
 ./backend/*.pyo
 ./backend/.env
 ./backend/venv
+dcoker-compose.yml
