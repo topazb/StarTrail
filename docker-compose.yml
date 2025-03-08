@@ -1,0 +1,33 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8080:80"
+    environment:
+      - REACT_APP_GOOGLE_CLIENT_ID=960344337123-saaspt04lo9edrtjhifd9gpmjrjijjn3.apps.googleusercontent.com
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5001:5000"
+    environment:
+      - GOOGLE_CLIENT_ID=960344337123-saaspt04lo9edrtjhifd9gpmjrjijjn3.apps.googleusercontent.com
+      - GOOGLE_CLIENT_SECRET=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
+
+      - DB_HOST=primary.database--bb8zsjb46dt2.addon.code.run
+      - DB_USER=7b0289190c20a9e6
+      - DB_PASSWORD=365d28cb75fb7a6551f02c82effacb
+      - DB_NAME=aeeb711e5cb1
+      - DB_PORT=27642
+
+      - FLASK_SECRET_KEY=f5d2e75c99b5f6e7c8a8b7461e02c98a9283bf4b78db7b9dff989b8b1019c731
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

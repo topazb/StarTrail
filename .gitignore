@@ -169,3 +169,24 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Google OAuth client secret
+client_secret.json
+./backend/client_secret.json
+./frontend/node_modules
+./frontend/build
+./frontend/.DS_Store
+./frontend/.env
+./backend/__pycache__
+./backend/*.pyc
+./backend/*.pyo
+./backend/*.pyd
+./backend/*.pyw
+./backend/*.pyz
+./backend/*.pywz
+./backend/*.pyzw
+./backend/*.pyc
+./backend/*.pyo
+./backend/.env
+./backend/venv
